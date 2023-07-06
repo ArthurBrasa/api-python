@@ -1,9 +1,14 @@
 import requests
 
-r = requests.get('https://www.googleapis.com/customsearch/v1?key=AIzaSyCPGtQu_S6OGEIFgWx5vWGH2WSFZmeTFug&cx=e1f978a5b39b8481c&q=teste')
-print(r.status_code)
+url = "https://pokeapi.co/api/v2/pokemon"
 
-print(r.json())
+payload = {}
+headers = {}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+
 
 
 
